@@ -1,0 +1,17 @@
+{
+  "name": "gonation-site-starter-theme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "GoNation <dev@gonation.com> (@GoNation)",
+  "license": "MIT",
+  "peerDependencies": {
+    "gatsby": "^2.6.0"
+  },
+  "dependencies": {
+    "gatsby-plugin-react-helmet": "^3.7.0",
+    "gatsby-source-filesystem": "^2.8.0",
+    "gatsby-transformer-json": "^2.8.0",
+    "gatsby-transformer-yaml": "^2.8.0",
+    "react-helmet": "^6.1.0"
+  }
+}

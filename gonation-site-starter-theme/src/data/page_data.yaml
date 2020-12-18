@@ -1,0 +1,29 @@
+- page:
+    type: home
+    title: Home
+    path: /
+
+- page:
+    type: about
+    title: About Us
+    path: /about-us
+
+- page:
+    type: menu
+    title: Menu
+    path: /menu
+
+- page:
+    type: events
+    title: Events
+    path: /events
+
+- page:
+    type: gallery
+    title: Gallery
+    path: /gallery
+
+- page:
+    type: contact
+    title: Contact
+    path: /contact

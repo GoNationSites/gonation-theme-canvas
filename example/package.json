@@ -2,7 +2,7 @@
   "name": "example",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "christopherbiscardi <chris@christopherbiscardi.com> (@chrisbiscardi)",
+  "author": "GoNation <dev@gonation.com> (@GoNation)",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "gatsby": "^2.26.1",
-    "gatsby-theme-minimal": "^1.0.0",
+    "gonation-site-starter-theme": "^1.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   }
