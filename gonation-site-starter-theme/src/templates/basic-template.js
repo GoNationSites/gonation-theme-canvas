@@ -31,12 +31,7 @@ const BasicTemplate = props => {
     }
   };
 
-  return (
-    <Layout data={props}>
-      <h1>Page Type: {type}</h1>
-      {getPageWrapper(type)}
-    </Layout>
-  );
+  return <Layout data={props}>{getPageWrapper(type)}</Layout>;
 };
 
 export default BasicTemplate;

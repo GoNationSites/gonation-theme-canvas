@@ -30,20 +30,27 @@ const Navigation = ({ data }) => {
           display: 'inline-block',
           marginX: 3,
           textTransform: 'uppercase',
+          transition: 'all .3s',
+          '&:hover': {
+            color: 'primary',
+            transition: 'all .3s',
+          },
         }}>
         {node.page.title}
       </Link>
     ));
 
+  const center = { justifyContent: 'center' };
+
   return (
-    <Box as='nav' sx={{ background: 'black', padding: 5 }}>
-      <Flex sx={{ justifyContent: 'center' }}>
+    <Box as='nav' sx={{ background: 'black', padding: 4 }}>
+      <Flex sx={center}>
         <Image
           sx={{ maxWidth: ['200px', '310px'] }}
           src={Logo || avatarURL}
           alt={name}></Image>
       </Flex>
-      <Flex sx={{ justifyContent: 'center', mt: 5 }}>{renderNavLinks()}</Flex>
+      <Flex sx={{ ...center, mt: 5 }}>{renderNavLinks()}</Flex>
     </Box>
   );
 };
