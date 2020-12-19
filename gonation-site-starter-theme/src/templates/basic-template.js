@@ -7,8 +7,7 @@ import Menu from '../pageComponents/menu';
 import Gallery from '../pageComponents/gallery';
 import Contact from '../pageComponents/contact';
 import Events from '../pageComponents/events';
-
-// import getPageWrapper from '../helpers/getPageWrapper';
+import Layout from '../pageComponents/layout/layout';
 
 const BasicTemplate = props => {
   const { type } = props?.pageContext?.pageContext;
@@ -16,27 +15,27 @@ const BasicTemplate = props => {
   const getPageWrapper = type => {
     switch (type) {
       case 'home':
-        return <Home props={props} />;
+        return <Home data={props} />;
       case 'about':
-        return <About props={props} />;
+        return <About data={props} />;
       case 'events':
-        return <Events props={props} />;
+        return <Events data={props} />;
       case 'contact':
-        return <Contact props={props} />;
+        return <Contact data={props} />;
       case 'menu':
-        return <Menu props={props} />;
+        return <Menu data={props} />;
       case 'gallery':
-        return <Gallery props={props} />;
+        return <Gallery data={props} />;
       default:
         return '';
     }
   };
 
   return (
-    <div>
+    <Layout data={props}>
       <h1>Page Type: {type}</h1>
       {getPageWrapper(type)}
-    </div>
+    </Layout>
   );
 };
 
@@ -72,6 +71,18 @@ export const query = graphql`
       zip
       loc
       gonationID
+    }
+
+    allPageDataYaml {
+      edges {
+        node {
+          page {
+            path
+            title
+            type
+          }
+        }
+      }
     }
   }
 `;
