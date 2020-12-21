@@ -31,6 +31,38 @@ export default {
       fontWeight: 'heading',
     },
   },
+  buttons: {
+    primary: {
+      color: 'white',
+      backgroundColor: 'primary',
+      border: '3px solid',
+      borderColor: 'primary',
+      fontSize: [3, 4],
+      paddingX: [3, 4],
+      paddingY: [2],
+      cursor: 'pointer',
+      '&:hover': {
+        color: 'white',
+        background: 'transparent',
+        transition: 'all .3s',
+      },
+    },
+    secondary: {
+      color: 'white',
+      backgroundColor: 'secondary',
+      border: '3px solid',
+      borderColor: 'secondary',
+      fontSize: [3, 4],
+      paddingX: [3, 4],
+      paddingY: [2],
+      cursor: 'pointer',
+      '&:hover': {
+        color: 'white',
+        background: 'transparent',
+        transition: 'all .3s',
+      },
+    },
+  },
   styles: {
     root: {
       fontFamily: 'body',

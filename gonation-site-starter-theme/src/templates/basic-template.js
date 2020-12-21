@@ -8,6 +8,7 @@ import Gallery from '../pageComponents/gallery';
 import Contact from '../pageComponents/contact';
 import Events from '../pageComponents/events';
 import Layout from '../pageComponents/layout/layout';
+import GoNationContext from '../context/GoNationContext';
 
 const BasicTemplate = props => {
   const { type } = props?.pageContext?.pageContext;
@@ -31,7 +32,16 @@ const BasicTemplate = props => {
     }
   };
 
-  return <Layout data={props}>{getPageWrapper(type)}</Layout>;
+  return (
+    <GoNationContext.Provider
+      value={{
+        businessData: props.data.businessData,
+        allPages: props.data.allPageDataYaml,
+        pageContext: props.pageContext,
+      }}>
+      <Layout data={props}>{getPageWrapper(type)}</Layout>
+    </GoNationContext.Provider>
+  );
 };
 
 export default BasicTemplate;
