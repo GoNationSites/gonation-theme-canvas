@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, Button } from 'theme-ui';
+import { Button } from 'theme-ui';
 
 import Hero from '../../components/Heros/Hero';
 import HeroWrapper from '../../components/heros/HeroWrapper';
