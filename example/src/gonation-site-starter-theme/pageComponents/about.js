@@ -1,18 +1,29 @@
 import React from 'react';
-import Hero from '../../components/Heros/Hero';
 
-const about = () => {
+import useApiRequest from '../../hooks/useAPIRequest';
+import Hero from '../../components/Heros/Hero';
+import AboutFeature from '../../components/About/aboutFeature';
+
+const About = props => {
+  // todo move this hook into the basic-template.js component to make default data fetching and data for each page.
+  const { error, isLoaded, data } = useApiRequest(props.endpoint[0].url);
+
   return (
     <div>
       <Hero
         heroData={{
           imageName: 'sites/ponza/ponza-about-hero',
-          height: 'calc(100vh - 246.75px)',
+          height: 'calc(85vh - 246.75px)',
           maxWidth: 2000,
           mainTitle: '',
         }}></Hero>
+      <AboutFeature
+        title={`Our Story`}
+        data={data}
+        error={error}
+        isLoaded={isLoaded}></AboutFeature>
     </div>
   );
 };
 
-export default about;
+export default About;

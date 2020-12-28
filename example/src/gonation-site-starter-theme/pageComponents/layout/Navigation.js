@@ -24,6 +24,7 @@ const Navigation = ({ data }) => {
   const renderNavLinks = () =>
     pageData.map(({ node }) => (
       <Link
+        key={node.page.path}
         activeStyle={{ color: colors.primary }}
         to={node.page.path}
         sx={{
@@ -46,6 +47,7 @@ const Navigation = ({ data }) => {
 
   return (
     <>
+      {/* DESKTOP NAVIGATION */}
       <Box as='nav' sx={{ background: 'black', padding: 4 }}>
         <Flex sx={center}>
           <Image
@@ -58,8 +60,13 @@ const Navigation = ({ data }) => {
         </Box>
       </Box>
 
+      {/* MOBILE NAVIGATION */}
       <Box sx={{ display: ['block', 'none'] }}>
-        <MobileBottomNav></MobileBottomNav>
+        <MobileBottomNav
+          data={{
+            businessData: data.data.businessData,
+            pageData,
+          }}></MobileBottomNav>
       </Box>
     </>
   );

@@ -4,6 +4,7 @@ import { Button } from 'theme-ui';
 import Hero from '../../components/Heros/Hero';
 import HeroWrapper from '../../components/heros/HeroWrapper';
 import Heading from '../../components/Styled_UI/Heading';
+import SideBySideLarge from '../../components/HomeComponents/sideBySideLarge';
 
 const home = () => {
   // todo add a 'config' file for most things with configuration settings. eg make a config file for this file and fill out with data below.
@@ -27,6 +28,7 @@ const home = () => {
           </Button>
         </HeroWrapper>
       </Hero>
+      <SideBySideLarge></SideBySideLarge>
     </>
   );
 };

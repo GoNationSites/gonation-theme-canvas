@@ -1,0 +1,23 @@
+- data:
+    type: meta
+    url: https://data.prod.gonation.com/profile/getname/?profile_id={GONATION_ID}
+
+- data:
+    type: shout
+    url: https://data.prod.gonation.com/profile/shoutsnew/{GONATION_ID}
+
+- data:
+    type: events
+    url: https://data.prod.gonation.com/profile/events?profile_id={GONATION_ID}
+
+- data:
+    type: recurring_events
+    url: https://data.prod.gonation.com/profile/recurringevents?profile_id={GONATION_ID}
+
+- data:
+    type: gallery
+    url: https://data.prod.gonation.com/profile/gallery?profile_id={GONATION_ID}
+
+- data:
+    type: menu
+    url: https://data.prod.gonation.com/pl/get?profile_id={GONATION_ID}&powerlistId=powered-list-{PL_ID}

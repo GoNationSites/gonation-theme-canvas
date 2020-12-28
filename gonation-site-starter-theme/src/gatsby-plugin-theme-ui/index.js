@@ -70,6 +70,7 @@ export default {
       fontWeight: 'body',
       a: {
         textDecoration: 'none',
+        color: 'inherit',
       },
     },
     h1: {

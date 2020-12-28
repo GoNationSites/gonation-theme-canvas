@@ -1,36 +1,14 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import About from '../pageComponents/about';
-import Home from '../pageComponents/home';
-import Menu from '../pageComponents/menu';
-import Gallery from '../pageComponents/gallery';
-import Contact from '../pageComponents/contact';
-import Events from '../pageComponents/events';
 import Layout from '../pageComponents/layout/layout';
 import GoNationContext from '../context/GoNationContext';
+import getPageWrapper from '../helpers/getPageWrapper';
 
 const BasicTemplate = props => {
   const { type } = props?.pageContext?.pageContext;
-
-  const getPageWrapper = type => {
-    switch (type) {
-      case 'home':
-        return <Home data={props} />;
-      case 'about':
-        return <About data={props} />;
-      case 'events':
-        return <Events data={props} />;
-      case 'contact':
-        return <Contact data={props} />;
-      case 'menu':
-        return <Menu data={props} />;
-      case 'gallery':
-        return <Gallery data={props} />;
-      default:
-        return '';
-    }
-  };
+  const dataEndpoints = props.data.allDataFetchingYaml.edges;
+  const { gonationID } = props.data.businessData;
 
   return (
     <GoNationContext.Provider
@@ -38,8 +16,9 @@ const BasicTemplate = props => {
         businessData: props.data.businessData,
         allPages: props.data.allPageDataYaml,
         pageContext: props.pageContext,
+        dataEndpoints,
       }}>
-      <Layout data={props}>{getPageWrapper(type)}</Layout>
+      <Layout data={props}>{getPageWrapper(type, props, gonationID)}</Layout>
     </GoNationContext.Provider>
   );
 };
@@ -85,6 +64,17 @@ export const query = graphql`
             path
             title
             type
+          }
+        }
+      }
+    }
+
+    allDataFetchingYaml {
+      edges {
+        node {
+          data {
+            type
+            url
           }
         }
       }

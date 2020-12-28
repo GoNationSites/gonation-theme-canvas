@@ -7,7 +7,7 @@ const events = () => {
       <Hero
         heroData={{
           imageName: 'sites/ponza/ponza-events-hero',
-          height: 'calc(100vh - 246.75px)',
+          height: 'calc(85vh - 246.75px)',
           maxWidth: 2000,
           mainTitle: '',
         }}></Hero>
