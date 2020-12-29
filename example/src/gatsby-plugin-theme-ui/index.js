@@ -24,6 +24,7 @@ export default {
     primary: '#009345',
     secondary: '#CF2B36',
     muted: '#fff',
+    offWhite: '#f7f7f7',
   },
   text: {
     heading: {

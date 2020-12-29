@@ -19,7 +19,7 @@ const aboutFeature = ({ title, data, isLoaded }) => {
         </Heading>
       </Box>
       <Box sx={{ maxWidth: 900, margin: 'auto' }}>
-        <Text sx={{ color: 'white', lineHeight: 1.75 }}>
+        <Text as='p' sx={{ color: 'white', lineHeight: 1.75 }}>
           {!isLoaded ? <Skeleton count={'5'}></Skeleton> : data.desc}
         </Text>
       </Box>
