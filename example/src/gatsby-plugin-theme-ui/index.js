@@ -1,5 +1,5 @@
 export default {
-  breakpoints: ['768px', '1200px', '1800px'],
+  breakpoints: ['400px', '768px', '1200px', '1800px'],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
     body:
@@ -9,6 +9,7 @@ export default {
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
   fontWeights: {
+    light: 200,
     body: 400,
     heading: 700,
     bold: 700,
@@ -31,6 +32,15 @@ export default {
       fontFamily: 'heading',
       lineHeight: 'heading',
       fontWeight: 'heading',
+    },
+    galleryAlbumTitle: {
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      fontWeight: 'light',
+      fontSize: [3, 4, 5],
+      color: 'muted',
+      textTransform: 'uppercase',
+      textAlign: 'center',
     },
   },
   buttons: {

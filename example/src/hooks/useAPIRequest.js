@@ -4,13 +4,12 @@ import jsonpAdapter from 'axios-jsonp';
 
 /**  
     A custom hook used for data fetching.
-
     @param url (String)
     @returns 3 pieces of state (error, isLoaded, data)
-    eric@gonation.com
 */
 
 const useApiRequest = url => {
+  console.log('url revieved: ', url);
   const [data, setData] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(null);
