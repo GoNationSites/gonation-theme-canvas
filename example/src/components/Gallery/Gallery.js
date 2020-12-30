@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { Box, Flex, Heading, Text } from 'theme-ui';
 import { FaArrowLeft } from 'react-icons/fa';
-import Lightbox from 'react-image-lightbox';
-import 'react-image-lightbox/style.css';
-import './lightboxStyle.css';
 
 import AlbumThumbnail from './AlbumThumbnail';
 import PhotoThumbnail from './PhotoThumbnail';
+import GalleryLightbox from './GalleryLightbox';
 
 const Gallery = ({ data }) => {
   const [activeAlbum, setActiveAlbum] = useState({});
@@ -81,27 +79,12 @@ const Gallery = ({ data }) => {
           </Box>
         )}
       </Box>
-      {lightbox.isOpen && (
-        <Lightbox
-          mainSrc={photos[photoIndex].imageUrl}
-          nextSrc={photos[(photoIndex + 1) % photos.length].imageUrl}
-          prevSrc={
-            photos[(photoIndex + photos.length - 1) % photos.length].imageUrl
-          }
-          imageCaption={photos[photoIndex].caption}
-          onCloseRequest={() => setLightbox({ ...lightbox, isOpen: false })}
-          onMovePrevRequest={() =>
-            setLightbox({
-              ...lightbox,
-              photoIndex: (photoIndex + photos.length - 1) % photos.length,
-            })
-          }
-          onMoveNextRequest={() =>
-            setLightbox({
-              ...lightbox,
-              photoIndex: (photoIndex + 1) % photos.length,
-            })
-          }
+      {isOpen && (
+        <GalleryLightbox
+          photos={photos}
+          photoIndex={photoIndex}
+          setLightbox={setLightbox}
+          lightbox={lightbox}
         />
       )}
     </>
