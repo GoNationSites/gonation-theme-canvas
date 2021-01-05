@@ -1,7 +1,7 @@
 module.exports = {
   plugins: [
     {
-      resolve: `gonation-site-starter-theme`,
+      resolve: `gonation-theme-canvas`,
       options: {
         gonationID: `bzn-FondcnQwSQ_Tz1io2ekLSg`,
       },

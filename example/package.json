@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "gatsby": "^2.26.1",
-    "gonation-site-starter-theme": "^1.0.0",
+    "gonation-theme-canvas": "^0.0.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-hamburger-menu": "^1.2.1"

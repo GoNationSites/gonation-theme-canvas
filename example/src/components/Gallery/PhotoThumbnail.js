@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Image, Box } from 'theme-ui';
 
-import GoNationContext from '../../gonation-site-starter-theme/context/GoNationContext';
+import GoNationContext from '../../gonation-theme-canvas/context/GoNationContext';
 import cloudinaryOptimizer from '../../helpers/cloudinaryOptimizer';
 
 const PhotoThumbnail = ({ photo, handlePhotoClick, idx }) => {
