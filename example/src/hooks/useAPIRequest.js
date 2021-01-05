@@ -9,7 +9,6 @@ import jsonpAdapter from 'axios-jsonp';
 */
 
 const useApiRequest = url => {
-  console.log('url revieved: ', url);
   const [data, setData] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(null);

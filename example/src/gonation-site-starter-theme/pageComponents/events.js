@@ -9,7 +9,6 @@ import Heading from '../../components/Styled_UI/Heading';
 
 const Events = props => {
   const pageTitle = props.data.pageContext.pageContext.title;
-  console.log('pageType: ', pageTitle);
   const {
     error: eventError,
     isLoaded: eventIsLoaded,
@@ -31,8 +30,6 @@ const Events = props => {
   if (eventError && recurringError) {
     return <Text>Error occurred</Text>;
   }
-
-  console.log(eventData, recurringData);
 
   if (pageTitle !== 'Events') {
     return (

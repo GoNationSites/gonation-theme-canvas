@@ -5,7 +5,6 @@ import Hero from '../../components/Heros/Hero';
 import AboutFeature from '../../components/About/aboutFeature';
 
 const About = props => {
-  // todo move this hook into the basic-template.js component to make default data fetching and data for each page.
   const { error, isLoaded, data } = useApiRequest(props.endpoint[0].url);
 
   return (

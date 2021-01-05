@@ -10,10 +10,7 @@ import SideBySideLarge from '../../components/HomeComponents/sideBySideLarge';
 import Instagram from '../../components/Instagram/Instagram';
 
 const Home = props => {
-  // todo add a 'config' file for most things with configuration settings. eg make a config file for this file and fill out with data below.
   const { error, isLoaded, data } = useApiRequest(props.endpoint[1].url);
-
-  console.log('trying with endpoint...', props.endpoint[1].url);
 
   return (
     <>

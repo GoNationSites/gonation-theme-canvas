@@ -32,7 +32,6 @@ const Instagram = () => {
   const renderImages = () =>
     imageNodes.map(({ node }) => <Thumbnail data={node} />);
 
-  console.log('data is..: ', data);
   return <Flex sx={{ flexWrap: 'wrap' }}>{renderImages()}</Flex>;
 };
 

@@ -6,8 +6,6 @@ import Heading from '../Styled_UI/Heading';
 import eventDaysReducer from '../../helpers/eventDaysReducer';
 
 const EventsSmall = ({ data }) => {
-  console.log('data in offers: ...', data);
-
   const getEventTime = offer => {
     const { eventDays } = offer;
     if (eventDays) {

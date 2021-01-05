@@ -16,7 +16,6 @@ const MobileNavItem = ({ item, idx }) => {
     backgroundColor: 'primary',
     mr: 2,
   };
-  console.log('idx: ', idx);
   return (
     <Fade left delay={idx * 100}>
       <Flex

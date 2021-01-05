@@ -25,7 +25,6 @@ const SocialIcons = () => {
 
   const socialLinks = Object.keys(data.businessData.links);
   const links = data.businessData.links;
-  console.log('data from data: ', socialLinks);
 
   const getIcon = name => {
     switch (name) {
@@ -48,8 +47,6 @@ const SocialIcons = () => {
         );
     }
   };
-
-  console.log('links: ', links);
 
   const renderSocialLinks = () => {
     return socialLinks
