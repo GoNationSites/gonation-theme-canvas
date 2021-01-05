@@ -15,8 +15,18 @@
 
 - page:
     type: events
+    title: Offers
+    path: /offers
+
+- page:
+    type: events
     title: Events
     path: /events
+
+- page:
+    type: custom
+    title: Private Events
+    path: /private-events
 
 - page:
     type: gallery

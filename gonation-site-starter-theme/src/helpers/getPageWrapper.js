@@ -7,6 +7,7 @@ import Menu from '../pageComponents/menu';
 import Gallery from '../pageComponents/gallery';
 import Contact from '../pageComponents/contact';
 import Events from '../pageComponents/events';
+import CustomPage from '../pageComponents/customPage';
 
 export default (type, props, gonationID) => {
   const dataEndpoints = props.data.allDataFetchingYaml.edges;
@@ -15,7 +16,7 @@ export default (type, props, gonationID) => {
       return (
         <Home
           data={props}
-          endpoint={getEndpoint(dataEndpoints, ['meta'], gonationID)}
+          endpoint={getEndpoint(dataEndpoints, ['meta', 'shout'], gonationID)}
         />
       );
     case 'about':
@@ -31,7 +32,7 @@ export default (type, props, gonationID) => {
           data={props}
           endpoint={getEndpoint(
             dataEndpoints,
-            ['events', 'recurring'],
+            ['events', 'recurring_events'],
             gonationID
           )}
         />
@@ -58,6 +59,6 @@ export default (type, props, gonationID) => {
         />
       );
     default:
-      return '';
+      return <CustomPage data={props}></CustomPage>;
   }
 };

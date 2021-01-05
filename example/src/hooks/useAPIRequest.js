@@ -22,8 +22,8 @@ const useApiRequest = url => {
         callbackParamName: 'callback',
       })
         .then(response => {
-          setIsLoaded(true);
           setData(response.data);
+          setIsLoaded(true);
         })
         .catch(error => {
           setError(error);

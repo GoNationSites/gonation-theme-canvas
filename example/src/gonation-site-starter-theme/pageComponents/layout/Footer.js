@@ -20,7 +20,8 @@ const Footer = ({ data }) => {
     allPageDataYaml.edges.map(({ node }) => (
       <Box
         sx={{
-          ml: 4,
+          ml: [0, 4],
+          paddingX: [3],
           color: 'white',
           textTransform: 'uppercase',
           transition: 'all .3s',
@@ -61,7 +62,9 @@ const Footer = ({ data }) => {
               textAlign: 'center',
               mb: [3, 3, 0],
             }}>
-            <Image src={Logo} alt={businessData.name} />
+            <Link to='/'>
+              <Image src={Logo} alt={businessData.name} />
+            </Link>
           </Box>
           <Flex
             sx={{

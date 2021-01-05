@@ -50,10 +50,12 @@ const Navigation = ({ data }) => {
       {/* DESKTOP NAVIGATION */}
       <Box as='nav' sx={{ background: 'black', padding: 4 }}>
         <Flex sx={center}>
-          <Image
-            sx={{ maxWidth: ['200px', '310px'] }}
-            src={Logo || avatarURL}
-            alt={name}></Image>
+          <Link to='/'>
+            <Image
+              sx={{ maxWidth: ['200px', '310px'] }}
+              src={Logo || avatarURL}
+              alt={name}></Image>
+          </Link>
         </Flex>
         <Box sx={{ display: ['none', 'block'] }}>
           <Flex sx={{ ...center, mt: 5 }}>{renderNavLinks()}</Flex>

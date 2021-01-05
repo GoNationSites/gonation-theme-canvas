@@ -1,5 +1,5 @@
 export default {
-  breakpoints: ['400px', '768px', '1200px', '1800px'],
+  breakpoints: ['400px', '900px', '1200px', '1800px'],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
     body:
@@ -83,6 +83,9 @@ export default {
       a: {
         textDecoration: 'none',
         color: 'inherit',
+      },
+      p: {
+        margin: 0,
       },
     },
     h1: {
