@@ -42,7 +42,7 @@ exports.sourceNodes = async (
         `https://data.gonation.com/profile/getname/?profile_id=${gonationID}`
       );
     } catch {
-      console.log(e);
+      console.error(e);
     }
   };
 

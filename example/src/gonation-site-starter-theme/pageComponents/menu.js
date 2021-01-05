@@ -9,12 +9,10 @@ const MenuComponent = props => {
   const endpoint = props.endpoint[0];
   const PL_ID = '1';
 
-  // todo move this hook into the basic-template.js component to make default data fetching and data for each page.
   const { error, isLoaded, data } = useApiRequest(
-    endpoint.url.replace('{PL_ID}', PL_ID)
+    endpoint.url.replace('{PL_ID}', PL_ID ? PL_ID : 1)
   );
 
-  // todo clean up the ternary and make better loading screen.
   return (
     <div>
       <Hero

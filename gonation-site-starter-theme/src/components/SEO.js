@@ -4,7 +4,6 @@ import avatarCoverStringBuilder from '../helpers/avatarCoverStringBuilder';
 import capitalize from '../helpers/capitalize';
 
 const SEO = props => {
-  console.log('seo props: ', props);
   const { businessData } = props.data.data;
   const { pageContext } = props.data.pageContext;
   return (

@@ -4,7 +4,7 @@ import { Box, Text } from 'theme-ui';
 import Hero from '../../components/Heros/Hero';
 import Heading from '../../components/Styled_UI/Heading';
 
-const customPage = props => {
+const customPage = () => {
   const linkStyle = {
     color: 'primary',
   };

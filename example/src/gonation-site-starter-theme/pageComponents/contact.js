@@ -12,7 +12,6 @@ import Heading from '../../components/Styled_UI/Heading';
 import NetlifyForm from '../../components/Forms/NetlifyForm';
 
 const Contact = props => {
-  // todo move this hook into the basic-template.js component to make default data fetching and data for each page.
   const { error, isLoaded, data } = useApiRequest(props.endpoint[0].url);
   const context = useThemeUI();
   const {

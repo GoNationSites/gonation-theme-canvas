@@ -9,7 +9,6 @@ import addHTTP from '../../helpers/addHTTPS';
 
 const sideBySideLarge = ({ withShout, shoutData, reversed }) => {
   if (withShout) {
-    console.log('shout!!!', shoutData);
     const { error, isLoaded, data } = shoutData;
 
     const renderCTAs = () => {
@@ -17,7 +16,6 @@ const sideBySideLarge = ({ withShout, shoutData, reversed }) => {
       return buttonNames
         .filter(btn => btn !== 'cta1' && btn !== 'cta2')
         .map(button => {
-          console.log('button loop: ', button);
           return (
             <Text
               as='a'
